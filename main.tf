@@ -16,13 +16,13 @@ provider "aws" {
 
 
 # Configure VPC
-resource "aws_vpc" "tfs_handson_testX" {        ## リネーム：X の箇所を自身に振られた番号に修正
-  cidr_block           = var.vpc_cidr       ## リネーム：X の箇所を自身に振られた番号に修正
+resource "aws_vpc" "tfs_handson_testX" {
+  cidr_block           = var.vpc_cidr
   enable_dns_support   = true
   enable_dns_hostnames = true
 
   tags = {
-    Name = var.tag_name              ## リネーム：X の箇所を自身に振られた番号に修正
+    Name = var.tag_name
     CTC_Bill01_Owner = "CTC"
     CTC_Bill02_System = "Transformation-Service"
   }
